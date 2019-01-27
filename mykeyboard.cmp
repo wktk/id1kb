@@ -1,0 +1,187 @@
+Cmp-Mod V01 Created by PcbNew   date = 2019 January 28, Monday 02:38:45
+
+BeginCmp
+TimeStamp = 5C673EFF
+Path = /5C4DCBF7
+Reference = U1;
+ValeurCmp = ProMicro;
+IdModule  = Keebio-Parts:ArduinoProMicro-BackSide;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C73FFCB
+Path = 
+Reference = Ref**;
+ValeurCmp = Val**;
+IdModule  = kbd:HOLE;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C73FFBC
+Path = 
+Reference = Ref**;
+ValeurCmp = Val**;
+IdModule  = kbd:HOLE;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C73FFAD
+Path = 
+Reference = Ref**;
+ValeurCmp = Val**;
+IdModule  = kbd:HOLE;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673C77
+Path = /5C4EE16F
+Reference = D1;
+ValeurCmp = DIODE;
+IdModule  = kbd:D3_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673C8F
+Path = /5C4EC66B
+Reference = D2;
+ValeurCmp = DIODE;
+IdModule  = kbd:D3_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673CA7
+Path = /5C4F03BD
+Reference = D3;
+ValeurCmp = DIODE;
+IdModule  = kbd:D3_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673CBF
+Path = /5C4EAF5A
+Reference = D4;
+ValeurCmp = DIODE;
+IdModule  = kbd:D3_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673CD7
+Path = /5C4F2B95
+Reference = D5;
+ValeurCmp = DIODE;
+IdModule  = kbd:D3_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673CEF
+Path = /5C4E427B
+Reference = D6;
+ValeurCmp = DIODE;
+IdModule  = kbd:D3_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673D07
+Path = /5C4E135B
+Reference = D7;
+ValeurCmp = DIODE;
+IdModule  = kbd:D3_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673D1F
+Path = /5C4E2D47
+Reference = D8;
+ValeurCmp = DIODE;
+IdModule  = kbd:D3_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673D39
+Path = /5C4FB0C7
+Reference = J1;
+ValeurCmp = MJ-4PP-9;
+IdModule  = kbd:MJ-4PP-9;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673D5E
+Path = /5C4DD858
+Reference = SW1;
+ValeurCmp = SW_PUSH;
+IdModule  = Keebio-Parts:Hybrid_PCB_100H_Dual_hole-LED;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673D83
+Path = /5C4DDAA0
+Reference = SW2;
+ValeurCmp = SW_PUSH;
+IdModule  = Keebio-Parts:Hybrid_PCB_100H_Dual_hole-LED;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673DA8
+Path = /5C4DD45D
+Reference = SW3;
+ValeurCmp = SW_PUSH;
+IdModule  = Keebio-Parts:Hybrid_PCB_100H_Dual_hole-LED;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673DCD
+Path = /5C4DE060
+Reference = SW4;
+ValeurCmp = SW_PUSH;
+IdModule  = Keebio-Parts:Hybrid_PCB_100H_Dual_hole-LED;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673DF2
+Path = /5C4DD65D
+Reference = SW5;
+ValeurCmp = SW_PUSH;
+IdModule  = Keebio-Parts:Hybrid_PCB_100H_Dual_hole-LED;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673E17
+Path = /5C4DE259
+Reference = SW6;
+ValeurCmp = SW_PUSH;
+IdModule  = Keebio-Parts:Hybrid_PCB_100H_Dual_hole-LED;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673E3C
+Path = /5C4DD6ED
+Reference = SW7;
+ValeurCmp = SW_PUSH;
+IdModule  = Keebio-Parts:Hybrid_PCB_100H_Dual_hole-LED;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673E61
+Path = /5C4DE359
+Reference = SW8;
+ValeurCmp = SW_PUSH;
+IdModule  = Keebio-Parts:Hybrid_PCB_100H_Dual_hole-LED;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C673E81
+Path = /5C4F967A
+Reference = SW9;
+ValeurCmp = SW_PUSH;
+IdModule  = Keebio-Parts:SW_Tactile_SPST_Angled_MJTP1117;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C73FFAA
+Path = 
+Reference = Ref**;
+ValeurCmp = Val**;
+IdModule  = kbd:HOLE;
+EndCmp
+
+EndListe
