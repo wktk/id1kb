@@ -20,7 +20,7 @@ U 1 1 5C4DCBF7
 P 7250 3550
 F 0 "U1" H 7250 4587 60  0000 C CNN
 F 1 "ProMicro" H 7250 4481 60  0000 C CNN
-F 2 "kbd:ProMicro_v2" H 7350 2500 60  0001 C CNN
+F 2 "Keebio-Parts:ArduinoProMicro-BackSide" H 7350 2500 60  0001 C CNN
 F 3 "" H 7350 2500 60  0000 C CNN
 	1    7250 3550
 	1    0    0    -1  
