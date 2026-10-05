@@ -23,9 +23,17 @@ reset_w = 7;
 reset_depth = 4.5;
 
 /* [Case] */
-floor_t = 2.0;
-wall = 2.0;
+floor_style = "full"; // [full, truss]
+floor_t = 1.2;
+wall = 1.2;
 post_d = 6.5;
+
+/* [Truss floor] */
+truss_w = 5;
+// Square pad inside each frame corner, room for a rubber foot.
+foot_pad = 10;
+// Radius of the pad's corner that faces the middle.
+foot_r = 5;
 
 /* [Hidden] */
 $fn = 64;
@@ -50,11 +58,34 @@ module outline(off) {
         offset(r = pcb_r + off) square([pcb_w - 2 * pcb_r, pcb_h - 2 * pcb_r]);
 }
 
+// Measured from the PCB's corner, so it also covers the frame under the pad.
+module foot_pad() {
+    t = truss_w + foot_pad;
+    square([t, t - foot_r]);
+    square([t - foot_r, t]);
+    translate([t - foot_r, t - foot_r]) circle(r = foot_r);
+}
+
+module floor_2d() {
+    if (floor_style == "full") outline(0);
+    else intersection() {
+        outline(0);
+        union() {
+            difference() { outline(0); outline(-truss_w); }
+            for (d = [[[0, 0], [pcb_w, pcb_h]], [[0, pcb_h], [pcb_w, 0]]])
+                hull() for (p = d) translate(p) circle(d = truss_w);
+            for (mx = [0, 1], my = [0, 1])
+                translate([mx * pcb_w, my * pcb_h]) mirror([mx, 0]) mirror([0, my]) foot_pad();
+        }
+    }
+}
+
 module shell() {
     difference() {
         linear_extrude(z_pcb) outline(0);
-        translate([0, 0, floor_t]) linear_extrude(z_pcb) outline(-wall);
+        translate([0, 0, -1]) linear_extrude(z_pcb + 2) outline(-wall);
     }
+    linear_extrude(floor_t) floor_2d();
 }
 
 // Starts slightly below its base so it fuses with the post instead of just touching it.
@@ -65,10 +96,20 @@ module pin(d) {
     }
 }
 
+// Bridged to the two nearest walls so no thin gap is left beside them.
+module post_2d(h) {
+    c = [h[0] < pcb_w / 2 ? 0 : pcb_w, h[1] < pcb_h / 2 ? 0 : pcb_h];
+    intersection() {
+        outline(0);
+        for (e = [[c[0], h[1]], [h[0], c[1]]])
+            hull() for (p = [h, e]) translate(pos(p)) circle(d = post_d);
+    }
+}
+
 module posts() {
-    for (h = holes) translate(pos(h)) {
-        cylinder(d = post_d, h = z_pcb);
-        translate([0, 0, z_pcb]) pin(pin_d);
+    for (h = holes) {
+        linear_extrude(z_pcb) post_2d(h);
+        translate(pos(h)) translate([0, 0, z_pcb]) pin(pin_d);
     }
 }
 
